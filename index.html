@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Interview Consent Pack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a sticky tab rail of two documents over one reading column; Gbemi's deck look (cream, near-black, yellow) */
+:root{--bg:#EDE9E2;--card:#FFFDF6;--fg:#111114;--mid:#6C6A66;--line:#CEC6B8;--accent:#FFD21F;--quote:#F6F2E8;
+--display:'Archivo','Arial Narrow',Impact,sans-serif;--body:'Archivo',Arial,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111114;--card:#18181C;--fg:#EDE9E2;--mid:#A29E97;--line:#34333A;--accent:#FFD21F;--quote:#1E1E23;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111114;--card:#18181C;--fg:#EDE9E2;--mid:#A29E97;--line:#34333A;--accent:#FFD21F;--quote:#1E1E23;color-scheme:dark}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--fg);font:400 16px/1.6 var(--body);padding-inline:clamp(16px,4vw,48px);padding-block:0 64px}
+.top{max-width:1180px;margin:0 auto;padding-block:36px 18px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.top h1{font:900 clamp(56px,10vw,128px)/.82 var(--display);font-stretch:62%;text-transform:uppercase;margin:0;letter-spacing:-.01em}
+.top h1 span{background:var(--accent);color:#111114;padding:0 .06em}
+.meta{font:500 12px/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mid);text-align:right}
+.rail{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);max-width:1180px;margin:0 auto;border-top:3px solid var(--fg);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.tab{all:unset;cursor:pointer;padding:12px 14px 12px;display:flex;flex-direction:column;gap:2px;border-right:1px solid var(--line);min-width:0}
+.tab:last-child{border-right:0}
+.tab .tn{font:500 11px var(--mono);letter-spacing:.12em;color:var(--mid)}
+.tab .tl{font:900 26px/.95 var(--display);font-stretch:62%;text-transform:uppercase}
+.tab .ts{font:400 12px/1.3 var(--body);color:var(--mid)}
+.tab:hover .tl{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.tab[aria-selected="true"]{background:var(--accent);color:#111114}
+.tab[aria-selected="true"] .tn,.tab[aria-selected="true"] .ts{color:#111114}
+.tab:focus-visible{outline:3px solid var(--fg);outline-offset:-3px}
+@media (max-width:760px){.rail{grid-template-columns:repeat(2,minmax(0,1fr))}.tab{border-bottom:1px solid var(--line)}.tab .ts{display:none}.tab .tl{font-size:22px}}
+main{max-width:1180px;margin:0 auto}
+.doc{max-width:820px;padding-block:28px 0}
+.doc h1{font:900 clamp(44px,7vw,84px)/.86 var(--display);font-stretch:62%;text-transform:uppercase;margin:0 0 18px;text-wrap:balance}
+.doc h2{font:900 30px/1 var(--display);font-stretch:70%;text-transform:uppercase;margin:40px 0 12px;padding-top:14px;border-top:2px solid var(--fg);text-wrap:balance}
+.doc h3{font:800 20px/1.2 var(--display);font-stretch:85%;margin:28px 0 8px}
+.doc p,.doc li{max-width:68ch}
+.doc p{margin:0 0 12px} .doc ul,.doc ol{margin:0 0 14px;padding-left:22px} .doc li{margin:0 0 6px}
+.doc blockquote{margin:10px 0 18px;padding:14px 18px;background:var(--quote);border-left:4px solid var(--accent);font-size:17px}
+.doc blockquote p:last-child{margin:0}
+.doc em{color:var(--mid)}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.doc code{font:400 13px var(--mono);background:var(--quote);padding:1px 5px;overflow-wrap:anywhere}
+.tw{overflow-x:auto;margin:10px 0 20px;max-width:100%}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums;background:var(--card)}
+th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line);min-width:80px}
+th{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;border-bottom:2px solid var(--fg)}
+.sig{margin:24px 0 0;padding-bottom:4px;border-bottom:1px solid var(--fg);max-width:420px}
+.foot{max-width:1180px;margin:48px auto 0;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mid)}
+@media (prefers-reduced-motion:no-preference){.doc:not([hidden]){animation:in .35s ease-out}@keyframes in{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<header class="top"><h1>Interview <span>consent</span></h1><p class="meta">Positron Flux research · Tallinn University · autumn 2026</p></header>
+<nav class="rail" role="tablist" aria-label="Documents"><button class="tab" role="tab" id="t-consent" aria-controls="consent" data-id="consent"><span class="tl">Consent form</span><span class="ts">To be signed by each participant</span></button><button class="tab" role="tab" id="t-note" aria-controls="note" data-id="note"><span class="tl">Participant note</span><span class="ts">For Katerina to share with participants</span></button></nav>
+<main><section class="doc" id="consent" role="tabpanel" aria-labelledby="t-consent" hidden><h1>Consent form</h1>
+<p><strong>Research session: how Positron Flux shows its insights about a team</strong><br />
+Interaction Design Workshop (IFI7374.DT), Tallinn University, autumn 2026, in collaboration with Positronics OÜ</p>
+<h2>The research team</h2>
+<ul>
+<li>Gbemisola Oladetoun, gbemigee@tlu.ee</li>
+<li>Martin Türnpuu</li>
+<li>Voweiro Ajenaghughrure, voweiro@tlu.ee</li>
+</ul>
+<p>We're three master's students in Human-Computer Interaction at Tallinn University.</p>
+<h2>What this is about</h2>
+<p>We're working with Positronics OÜ, the company behind Positron Flux, to understand how engineering leaders read and act on the insights the product finds about how a team's behavioral metrics link to the objectives its leader sets. What we learn will shape our designs and our course report.</p>
+<h2>What you'll do</h2>
+<p>The session takes about 30 to 45 minutes on a video call.</p>
+<ol>
+<li>We'll ask about your teams, the objectives you set, and how you check on how they're doing.</li>
+<li>If you agree, you'll share your screen and show us what you use today. This is optional.</li>
+<li>You'll use Positron Flux yourself, through a temporary invitation to Positronics' own account, and complete three short tasks.</li>
+<li>We'll show you some cards about an insight and ask what you make of them, and how much you'd trust them.</li>
+</ol>
+<p>There are no right or wrong answers. We're testing the product, not you, and we want to hear about your own experience.</p>
+<h2>Your data</h2>
+<ul>
+<li><strong>Recording.</strong> With your agreement, we record the audio and video of the call. If you share your screen, we only record it if you say yes below.</li>
+<li><strong>Anonymity.</strong> We give you a code, such as P03. Your name and your company's name never appear in anything we write. When we quote you, we take out anything that could identify you or your company.</li>
+<li><strong>Who sees it.</strong> Only the three of us see the recordings and notes. Our teachers and Positronics see only anonymised findings and quotes.</li>
+<li><strong>Storage.</strong> Recordings and notes are kept in a private Tallinn University drive, never in public places.</li>
+<li><strong>Deletion.</strong> All recordings and notes are deleted at the end of the course, by 31 December 2026.</li>
+<li><strong>Your company's information.</strong> Please don't share anything confidential about your company. If you'd rather not show something, just describe it.</li>
+</ul>
+<h2>Keeping Positron Flux confidential</h2>
+<p>Positron Flux isn't public yet. Please don't share, screenshot or describe outside this session anything you see of the product or its data.</p>
+<h2>Your rights</h2>
+<p>Taking part is voluntary, and there's no payment. You can skip any question, pause, or stop at any time without giving a reason, and nothing bad comes of it. You can ask us to delete your data at any time until 31 December 2026, by writing to gbemigee@tlu.ee.</p>
+<p>There may be no direct benefit to you. What you tell us helps make Positron Flux's insights easier to understand and to trust.</p>
+<h2>Please tick each box you agree with</h2>
+<ul>
+<li>☐ I've read and understood this form, and I've had the chance to ask questions.</li>
+<li>☐ I understand that taking part is voluntary and that I can stop at any time.</li>
+<li>☐ I agree to take part.</li>
+<li>☐ I agree to the session being recorded (audio and video).</li>
+<li>☐ I agree to my screen being recorded while I share it. <em>(optional)</em></li>
+<li>☐ I agree to anonymised quotes being used in the course report, poster and presentation.</li>
+<li>☐ I'll keep what I see of Positron Flux confidential.</li>
+</ul>
+<p class="sig">Name</p>
+
+<p class="sig">Date</p>
+
+<p>If you haven't sent the form back before the call, we'll go through the key points at the start and ask for your agreement on the recording.</p>
+<p><strong>Questions.</strong> Write to Gbemisola Oladetoun at gbemigee@tlu.ee. Course coordinator: Mustafa Can Özdemir, Tallinn University.</p></section><section class="doc" id="note" role="tabpanel" aria-labelledby="t-note" hidden><h1>Participant note</h1>
+<p>This is for Katerina to share with participants when she books each session, along with the consent form. These are the points we'd like her to include, in her own words.</p>
+<h2>What the session is</h2>
+<ul>
+<li>It's a video call of about 30 to 45 minutes.</li>
+<li>They'll ask about the objectives the participant sets for their teams and how they keep an eye on them today.</li>
+<li>The participant will try Positron Flux themselves, and then look at a few cards and say what they make of them.</li>
+<li>There are no right or wrong answers. They're testing the product, not the person.</li>
+</ul>
+<h2>Before the call</h2>
+<ul>
+<li>The participant will get an invitation from Positronics to Positronics' own Positron Flux account. Please accept it before the session. They'll only see Positronics' own team data, and the access is removed after the call.</li>
+<li>They may be asked to share their screen and show whatever they use to check on their teams today. This is optional, and they can describe it instead. They shouldn't show anything confidential.</li>
+</ul>
+<h2>Privacy</h2>
+<ul>
+<li>The call is recorded only if the participant agrees.</li>
+<li>The recording stays with the three students, and anything they write uses a code instead of the participant's name.</li>
+<li>Everything is deleted at the end of the course.</li>
+<li>The participant can stop at any time. The consent form has the details.</li>
+</ul>
+<h2>Keeping it quiet</h2>
+<ul>
+<li>Positron Flux isn't public yet, so we ask participants to keep what they see in the session to themselves.</li>
+</ul>
+<h2>Questions</h2>
+<ul>
+<li>Participants can write to Gbemisola at gbemigee@tlu.ee.</li>
+</ul>
+<h2>For Katerina</h2>
+<ul>
+<li>Once a session is booked, please pass the participant's name and email to Samo, so he can invite them into the Positron Flux instance before the call.</li>
+<li>Please send the consent form with the booking. How the participant sends it back, with a digital signature or a reply to your email, is up to you.</li>
+</ul></section></main>
+<script>
+(function(){
+ const tabs=[...document.querySelectorAll('.tab')];
+ function show(id,push){
+  if(!document.getElementById(id)) id=tabs[0].dataset.id;
+  tabs.forEach(t=>{const on=t.dataset.id===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.dataset.id).hidden=!on;});
+  if(push) try{history.replaceState(null,'','#'+id)}catch(e){}
+ }
+ tabs.forEach((t,i)=>{t.addEventListener('click',()=>{show(t.dataset.id,true);window.scrollTo({top:0})});
+  t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];n.focus();show(n.dataset.id,true);}});});
+ show((location.hash||'').slice(1),false);
+})();
+</script>
+</body>
+</html>
